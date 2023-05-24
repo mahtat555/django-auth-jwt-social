@@ -59,6 +59,7 @@ THIRDPARTY_APPS = [
 ]
 
 LOCAL_APPS = [
+    "accounts"
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + THIRDPARTY_APPS + LOCAL_APPS
@@ -187,3 +188,7 @@ EMAIL_USE_TLS = str_to_bool(os.getenv("EMAIL_USE_TLS", "true"))
 STRIPE_PK_KEY = os.getenv("STRIPE_PK_KEY")
 STRIPE_SK_KEY = os.getenv("STRIPE_SK_KEY")
 STRIPE_WEBHOOK_SK = os.getenv("STRIPE_WEBHOOK_SK")
+
+# The custom user model
+
+AUTH_USER_MODEL = "accounts.User"
